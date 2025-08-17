@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Dovolená 2025 - V partě je nejlíp!</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer>
+        // Odpočítávání do dovolené
+        const countdown = () => {
+            const target = new Date("2025-08-20T11:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = target - now;
+
+            if (diff <= 0) {
+                document.getElementById("countdown").innerText = "Dovolená právě začala! 🚗🍦";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("countdown").innerText =
+                `Začínáme za ${days} dní, ${hours} hod, ${minutes} min!`;
+        };
+
+        setInterval(countdown, 1000);
+        window.onload = countdown;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Dovolená 2025 🏖️🚗🍦</h1>
+        <p>Sraz, koupání, ferraty, houby a hlavně... pohoda!</p>
+        <div id="countdown" class="countdown"></div>
+    </header>
+
+    <section class="day-plan">
+        <h2>🗓️ Středa 20. 8. 2025 – Den 1</h2>
+        <ol>
+            <li>
+                <strong>11:00 – Zmrzlina Málek (Slatiňany)</strong><br>
+                <a href="https://www.google.com/maps?q=zmrzlina+Málek+Slatiňany" target="_blank">📍 Mapa</a><br>
+            </li>
+            <li>
+                <strong>Koupání – Lom Trhová Kamenice</strong><br>
+                <a href="https://www.google.com/maps?q=lom+Trhová+Kamenice" target="_blank">📍 Mapa</a><br>
+            </li>
+            <li>
+                <strong>Ubytko – Apartmánový dům U Lucie, Škrdlovice</strong><br>
+                <a href="https://www.google.com/maps?q=Apartmánový+dům+U+Lucie,+Škrdlovice" target="_blank">📍 Mapa</a><br>
+            </li>
+            <li>
+                <strong>Koupání – Velké Dářko</strong><br>
+                <a href="https://www.google.com/maps?q=Velké+Dářko" target="_blank">📍 Mapa</a><br>
+            </li>
+        </ol>
+    </section>
+
+    <section class="activities">
+        <h2>🎒 Plány na další dny (podle počasí)</h2>
+        <ul>
+            <li>🧗 Via Ferrata Vír</li>
+            <li>🛶 Plavba na raftu</li>
+            <li>🥾 Túra + houbaření</li>
+            <li>🛼 Inline brusle v přírodě</li>
+            <li>🎲 Deskové hry & karty</li>
+            <li>🎨 Gartic Phone nebo jiné šílenosti</li>
+            <li>🔥 Posezení u ohně s kytarou</li>
+        </ul>
+    </section>
+
+    <section class="departure">
+        <h2>📅 Odjezd</h2>
+        <p>V neděli 24. 8. 2025 (čas domluvíme – podle stavu posádky 😅)</p>
+    </section>
+
+    <footer>
+        <p>Web vytvořen s láskou a smíchem 😎 &middot; 2 auta, 1 mise</p>
+    </footer>
+</body>
+</html>
